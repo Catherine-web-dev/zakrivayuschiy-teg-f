@@ -363,7 +363,6 @@ body:has(.floppy_dialog[open]) {
     margin-top: 27vw;
     margin-bottom: 28vw;
         /* aspect-ratio: 235 / 109; */
-    block-size: 325px;
   }
 
   .header_title {
