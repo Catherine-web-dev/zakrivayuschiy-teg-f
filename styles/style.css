@@ -353,6 +353,7 @@ body:has(.floppy_dialog[open]) {
   .header,
   .footer {
     width: 100%;
+    height: 327px;
   }
 /*
   .main {
@@ -360,7 +361,7 @@ body:has(.floppy_dialog[open]) {
   }
 */
   .header {
-    margin-top: 27vw;
+    margin-top: 30vw;
     margin-bottom: 28vw;
         /* aspect-ratio: 235 / 109; */
   }
