@@ -187,7 +187,8 @@
 }
 
 .dialog_floppy_svg {
-  width: 53px;
+  width: 50px;
+  height: 50px;
 }
 
 .card__like-button {
@@ -229,7 +230,7 @@
 }
 
 .save_button {
-  width: 336px;
+  width: 340px;
 /* height: 84px;*/
   min-height: 55px;
 /* margin: 30px 34.5px;*/
@@ -275,14 +276,14 @@
 }*/
 
 .floppy_dialog[open] {
+  /*position: fixed;*/
+ /* inset: 0;*/
+ /* display: flex;*/
   flex-shrink: 0;
   border: var(--main-border);
-  inline-size: 360px;
-  width: 341px;
-  height: 191px;
-  padding-left: 35px;
-  padding-right: 32px;
-  padding-top: 24px;
+  padding: 30px;
+/*  min-inline-size: 341px;*/
+  inline-size: 354px;
 }
 
 .floppy_dialog[open]::backdrop {
@@ -297,15 +298,14 @@ body:has(.floppy_dialog[open]) {
 .dialog_description {
   display: flex;
   align-items: center;
-  gap: 21px;
-  padding-bottom: 16px;
-  padding-top: 5px;
+  gap: 18px;
+  padding-bottom: 27px;
+  padding-top: 2px;
 }
 
 .dialog_button {
   inline-size: 100%;
-  height: 38px;
-  margin-top: 13px;
+ /* min-inline-size: 255px;*/
   min-block-size: 38px;
 }
 
@@ -324,9 +324,7 @@ body:has(.floppy_dialog[open]) {
 
 .article_image {
   display: block;
-  height: 696px;
-  width: 696px;
-  margin-bottom: -12px;
+
   object-fit: cover;
   object-position: center;
   inline-size: 100%;
@@ -362,49 +360,30 @@ body:has(.floppy_dialog[open]) {
   }
 */
   .header {
-    margin-top: 30vw;
+    margin-top: 27vw;
     margin-bottom: 28vw;
         /* aspect-ratio: 235 / 109; */
+    block-size: 325px;
   }
 
   .header_title {
     line-height: 49px;
     letter-spacing: normal;
   }
-
-  .dialog_description {
-    display: flex;
-    align-items: center;
-    gap: 17px;
-    padding-bottom: 15px;
-    padding-top: 5px;
+/*
+  .header_subtitle {
+    font-size: 14px;
   }
-
-.article_image {
-  display: block;
-  margin-bottom: 14px;
-  height: 371px;
-  width: 371px;
-  object-fit: cover;
-  object-position: center;
-  inline-size: 100%;
-  max-block-size: 100%;
+*/
 
   .article_info {
-    padding: 0px 27px 25px 27px;
+    padding: 20px 27px 25px 27px;
   }
 
   .card_label {
     top: 20px;
     right: 10px;
   }
-
-  .dialog_button {
-    inline-size: 100%;
-   /* min-inline-size: 255px;*/
-    min-block-size: 38px;
-  }
-  
 
   .save_button {
     flex-direction: column;
@@ -424,32 +403,16 @@ body:has(.floppy_dialog[open]) {
     margin-bottom: 4px;
   }
 
-  .floppy_dialog[open] {
+  dialog.floppy_dialog[open],
+  #floppy_dialog[open] {
     flex-shrink: 0;
     border: var(--main-border);
     inline-size: 360px;
     width: 341px;
     padding-left: 35px;
     padding-right: 32px;
-    padding-top: 24px;
+    padding-top: 22px;
+    padding-bottom: 28px;
   }
 
-  .dialog_floppy_svg {
-    width: 50px;
-    height: 50px;
-  }
-
-  .dialog_label {
-    align-self: flex-start;
-    font-family: var(--accent-font);
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-    text-align: left;
-    text-decoration-skip-ink: none;
-    text-underline-position: from-font;
-    text-transform: uppercase;
-    width: fit-content;
-  }
-  
-};
+}
